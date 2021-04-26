@@ -1,0 +1,19 @@
+[package]
+name = "dashmap_vs_lockfree"
+version = "0.1.0"
+authors = ["taisei"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dashmap = "4"
+lockfree = "0.5"
+criterion = { version = "0.3", features = ["async_std"]}
+rand = "0.8.3"
+async-std = "1.9.0"
+async-trait = "0.1"
+
+[[bench]]
+name = "my_benchmark"
+harness = false
